@@ -1,6 +1,6 @@
 
 
-namespace VirtualHealth_ASP.NET.API.Domain.Contract
+namespace VirtualHealth_ASP.NET.API.src.Domain.Contract
 {
   public class ApiResponse<T>
     {

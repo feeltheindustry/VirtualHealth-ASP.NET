@@ -1,12 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace VirtualHealth_ASP.NET.API.Extensions
+namespace VirtualHealth_ASP.NET.src.API.Extensions
 {
     public class ApplicatrionService
     {
-        
+
     }
 }

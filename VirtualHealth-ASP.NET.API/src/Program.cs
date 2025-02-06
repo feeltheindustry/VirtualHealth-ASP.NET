@@ -5,27 +5,27 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+
 builder.Services.AddOpenApi();
 
-    const string BearerScheme = "Bearer";
+const string BearerScheme = "Bearer";
 
-    builder.Services.AddSwaggerGen(c =>
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Virtual Health API ", Version = "v1", Description = "This is an Api for virtual health " });
+
+    c.AddSecurityDefinition(BearerScheme, new OpenApiSecurityScheme
     {
-        c.SwaggerDoc("v1", new OpenApiInfo { Title = "Virtual Health API ", Version = "v1", Description = "This is an Api for virtual health " });
+        Name = "Authorization",
+        Type = SecuritySchemeType.Http,
+        Scheme = BearerScheme,
+        BearerFormat = "JWT",
+        In = ParameterLocation.Header,
+        Description = "Please enter a valid token in the following format: {your token here} do not add the word 'Bearer' before it."
+    });
 
-        c.AddSecurityDefinition(BearerScheme, new OpenApiSecurityScheme
-        {
-            Name = "Authorization",
-            Type = SecuritySchemeType.Http,
-            Scheme = BearerScheme,
-            BearerFormat = "JWT",
-            In = ParameterLocation.Header,
-            Description = "Please enter a valid token in the following format: {your token here} do not add the word 'Bearer' before it."
-        });
-
-        c.AddSecurityRequirement(new OpenApiSecurityRequirement
-        {
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
         {
             new OpenApiSecurityScheme
             {
@@ -40,8 +40,8 @@ builder.Services.AddOpenApi();
             },
             new List<string>()
         }
-        });
     });
+});
 
 
 var app = builder.Build();
