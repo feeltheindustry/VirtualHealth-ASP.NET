@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace VirtualHealth_ASP.NET.API.Domain.Abstractions
+namespace VirtualHealth_ASP.NET.API.src.Domain.Abstractions
 {
     public class ITokenService
     {

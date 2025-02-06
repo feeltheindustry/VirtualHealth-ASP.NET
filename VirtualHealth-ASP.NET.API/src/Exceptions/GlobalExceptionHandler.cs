@@ -1,6 +1,6 @@
 
 
-namespace VirtualHealth_ASP.NET.API.Exceptions
+namespace VirtualHealth_ASP.NET.API.src.Exceptions
 {
     public class GlobalExceptionHandler
     {

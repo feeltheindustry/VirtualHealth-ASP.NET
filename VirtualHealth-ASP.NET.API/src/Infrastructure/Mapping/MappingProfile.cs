@@ -1,9 +1,9 @@
 
 
-namespace VirtualHealth_ASP.NET.API.Infrastructure.Mapping
+namespace VirtualHealth_ASP.NET.API.src.Infrastructure.Mapping
 {
     public class MappingProfile
     {
-        
+
     }
 }

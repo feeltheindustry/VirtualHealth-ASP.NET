@@ -1,11 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
-using VirtualHealth_ASP.NET.API.Domain.Enums;
 
-namespace VirtualHealth_ASP.NET.API.Domain.Models
+using System.ComponentModel.DataAnnotations;
+using VirtualHealth_ASP.NET.API.src.Domain.Enums;
+
+namespace VirtualHealth_ASP.NET.API.src.Domain.Models
 {
     public class  Notification
     {
